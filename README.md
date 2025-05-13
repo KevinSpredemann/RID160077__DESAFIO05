@@ -39,7 +39,7 @@ git clone https://github.com/seu-usuario/seu-repositorio.git
 cd seu-repositorio
 ```
 
-🔙 Back-End (API)
+### 🔙 Back-End (API)
 1. Vá para a pasta Back-End/:
 ```bash
 cd Back-End
@@ -55,11 +55,11 @@ npm install
 npm run dev
 ```
 
-## A API estará disponível em: 
-### http://localhost:3000
+## A API estará disponível em: http://localhost:3000
 
-🎨 Front-End (React)
-1. Vá para a pasta Front/:
+
+### 🎨 Front-End (React)
+1. Vá para a pasta Desafio05-Front/:
 ```bash
 cd ../Front
 ```
@@ -76,6 +76,8 @@ npm run dev
 
 ### O app abrirá em: http://localhost:5173
 
+---
+
 📌 Funcionalidades da API
 
 
@@ -87,6 +89,7 @@ npm run dev
 | PUT    | `/livros/:id` | Atualiza um livro existente |
 | DELETE | `/livros/:id` | Remove um livro             |
 
+---
 
 📬 Contato
 Criado por Kevin Spredemann – kevinspredemann50@gmail.com
