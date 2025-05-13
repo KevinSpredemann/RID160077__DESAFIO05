@@ -1,4 +1,4 @@
-import db from "../config/database";
+import db from "../config/database.js";
 
 db.run(`
     CREATE TABLE IF NOT EXISTS books (

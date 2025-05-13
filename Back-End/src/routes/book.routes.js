@@ -1,7 +1,7 @@
 import { Router } from "express";
-import bookController from "../controller/book.controller";
-import { validate } from "../middlewares/validation.middleware";
-import { bookSchema } from "../schemas/book.schema";
+import bookController from "../controller/book.controller.js";
+import { validate } from "../middlewares/validation.middleware.js";
+import { bookSchema } from "../schemas/book.schema.js";
 
 const router = Router();
 

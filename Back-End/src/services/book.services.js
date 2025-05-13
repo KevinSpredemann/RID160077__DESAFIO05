@@ -1,4 +1,5 @@
-import bookRepository from "../repositories/book.repository";
+import e from "express";
+import bookRepository from "../repositories/book.repository.js";
 
 async function createBookService(newNook) {
   const createBook = await bookRepository.createBookRepository(newNook);
@@ -29,11 +30,11 @@ async function updateBookService(bookID, updateBook) {
   if (!book) {
     throw new Error("Livro não encontrado");
   }
-  const updateBook = await bookRepository.UpdateBookRepository(bookID, updateBook);
-  if (!updateBook) {
+  const updatedBook = await bookRepository.UpdateBookRepository(bookID, updateBook);
+  if (!updatedBook) {
     throw new Error("Livro não atualizado");
   }
-  return updateBook;
+  return updatedBook;
 }
 
 async function deleteBookService(bookID) {
