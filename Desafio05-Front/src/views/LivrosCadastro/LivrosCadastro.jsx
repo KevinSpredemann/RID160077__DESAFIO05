@@ -3,6 +3,7 @@ import Header from "../../components/Header/Header";
 import "./index.scss";
 import SubmenuLivros from "../../components/SubmenuLivros/SubmenuLivros";
 import { LivrosService } from "../../api/LivrosService";
+import Swal from "sweetalert2";
 
 const LivrosCadastro = () => {
   const [livro, setLivro] = useState({
@@ -14,7 +15,7 @@ const LivrosCadastro = () => {
   const [error, setError] = useState("");
 
   async function createLivro(event) {
-    event.preventDefault(); 
+    event.preventDefault();
 
     const numPaginasConvertido = Number(livro.num_paginas);
 
@@ -23,7 +24,11 @@ const LivrosCadastro = () => {
       return;
     }
 
-    if (!livro.num_paginas || isNaN(numPaginasConvertido) || numPaginasConvertido <= 0) {
+    if (
+      !livro.num_paginas ||
+      isNaN(numPaginasConvertido) ||
+      numPaginasConvertido <= 0
+    ) {
       setError("Número de páginas deve ser um número válido e maior que zero!");
       return;
     }
@@ -52,11 +57,21 @@ const LivrosCadastro = () => {
 
     try {
       await LivrosService.createLivro(body);
-      alert("Livro cadastrado com sucesso!");
+      Swal.fire({
+        position: "center",
+        icon: "success",
+        title: "Livro cadastrado com sucesso!",
+        showConfirmButton: false,
+        timer: 1500,
+      });
       setLivro({ titulo: "", num_paginas: "", isbn: "", editora: "" });
       setError("");
     } catch (error) {
-      setError(`Erro ao cadastrar livro: ${error.response?.status} - ${error.response?.data?.error || "Erro desconhecido"}`);
+      setError(
+        `Erro ao cadastrar livro: ${error.response?.status} - ${
+          error.response?.data?.error || "Erro desconhecido"
+        }`
+      );
     }
   }
 

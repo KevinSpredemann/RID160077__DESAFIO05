@@ -4,6 +4,7 @@ import "./index.scss";
 import SubmenuLivros from "../../components/SubmenuLivros/SubmenuLivros";
 import { useParams } from "react-router-dom";
 import { LivrosService } from "../../api/LivrosService";
+import Swal from "sweetalert2";
 
 const LivrosEdicao = () => {
   let { livroId } = useParams();
@@ -63,8 +64,14 @@ const LivrosEdicao = () => {
 
     try {
       await LivrosService.updateLivro(Number(livro.id), body);
-      alert("Livro editado com sucesso!");
-      setLivro({ id: livro.id , ...body });
+      Swal.fire({
+        position: "center",
+        icon: "success",
+        title: "Livro atualizado com sucesso!",
+        showConfirmButton: false,
+        timer: 1500,
+      });
+      setLivro({ id: livro.id, ...body });
       setError("");
     } catch (error) {
       setError(
