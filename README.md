@@ -37,28 +37,42 @@ Este é um projeto completo de uma aplicação de **cadastro e gerenciamento de 
 ```bash
 git clone https://github.com/seu-usuario/seu-repositorio.git
 cd seu-repositorio
+```
 
 🔙 Back-End (API)
 1. Vá para a pasta Back-End/:
+```bash
 cd Back-End
+```
 
-2. Instale as dependências:
+3. Instale as dependências:
+```bash
 npm install
+```
 
-3. Inicie o servidor:
+5. Inicie o servidor:
+```bash
 npm run dev
+```
 
-A API estará disponível em: http://localhost:3000
+## A API estará disponível em: 
+### http://localhost:3000
 
 🎨 Front-End (React)
 1. Vá para a pasta Front/:
+```bash
 cd ../Front
+```
 
 2.Instale as dependências:
+```bash
 npm install
+```
 
 3.Inicie o servidor de desenvolvimento:
+```bash
 npm run dev
+```
 
 ### O app abrirá em: http://localhost:5173
 
@@ -74,4 +88,6 @@ npm run dev
 | DELETE | `/livros/:id` | Remove um livro             |
 
 
-
+📬 Contato
+Criado por Kevin Spredemann – kevinspredemann50@gmail.com
+Este projeto é para fins educacionais.
