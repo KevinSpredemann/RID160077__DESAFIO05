@@ -4,7 +4,12 @@ import router from "./src/routes/book.routes.js";
 
 const app = express();
 
-app.use(cors());
+const corsOptions = {
+  origin: 'https://desafio05-project.netlify.app', 
+  optionsSuccessStatus: 200
+};
+
+app.use(cors(corsOptions));
 app.use(express.json());
 app.use(router);
 
