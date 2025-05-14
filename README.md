@@ -56,6 +56,7 @@ npm run dev
 ```
 
 ## A API estará disponível em: http://localhost:3000
+## Porém eu fiz o deploy dela em: https://rid160077-desafio05.onrender.com
 
 
 ### 🎨 Front-End (React)
@@ -75,6 +76,9 @@ npm run dev
 ```
 
 ### O app abrirá em: http://localhost:5173
+## Porém eu fiz o deploy dela em: https://desafio05-project.netlify.app
+
+### ( para testar sem sua máquina sem erros você precisa somente mudar o caminho da API que esta na pasta do front-end, e retirar o caminho colocado no CORS do back-end )
 
 ---
 
