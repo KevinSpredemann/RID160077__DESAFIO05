@@ -39,7 +39,7 @@ async function updateBookService(bookID, updateBook) {
 
 async function deleteBookService(bookId) {
   const book = await bookRepository.findByIDRepository(bookId);
-  if (!book) throw new Error("Book not found");
+  if (!book) throw new Error("Livro não encontrado");
   const titulo = book.titulo;
   await bookRepository.DeleteBookRepository(bookId);
   return { message: "Livro removido com sucesso", titulo };

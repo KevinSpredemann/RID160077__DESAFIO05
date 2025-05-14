@@ -5,7 +5,7 @@ db.run(`
         id INTEGER PRIMARY KEY AUTOINCREMENT,
         titulo TEXT NOT NULL,
         num_paginas INTEGER NOT NULL,
-        isbn TEXT NOT NULL,
+        isbn INTEGER NOT NULL,
         editora TEXT NOT NULL
     ) 
 `);
