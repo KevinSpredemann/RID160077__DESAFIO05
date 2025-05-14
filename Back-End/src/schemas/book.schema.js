@@ -2,10 +2,9 @@ import { z } from "zod";
 
 export const bookSchema = z.object({
   isbn: z
-    .number({
+    .string({
       required_error: "O ISBN é obrigatório",
     })
-    .int("O ISBN deve ser inteiro")
     .regex(/^\d{13}$/, "O ISBN deve conter exatamente 13 dígitos numéricos"),
 
   num_paginas: z
