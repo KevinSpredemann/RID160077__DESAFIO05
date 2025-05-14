@@ -2,7 +2,7 @@ import { z } from "zod";
 
 export const bookSchema = z.object({
   isbn: z
-    .string({
+    .number({
       required_error: "O ISBN é obrigatório",
     })
     .int("O ISBN deve ser inteiro")
